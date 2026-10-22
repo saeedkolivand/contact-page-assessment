@@ -1,5 +1,6 @@
 import "./App.css";
 import Header from "./components/header/Header.tsx";
+import TrustBar from "./components/trustBar/TrustBar.tsx";
 
 function App() {
   return (
@@ -8,6 +9,8 @@ function App() {
       <Header />
 
       {/*  middle part   */}
+      <TrustBar />
+
       {/*  footer part   */}
     </div>
   );
