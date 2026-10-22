@@ -1,4 +1,4 @@
-import Image from "../../ui/Image/Image.tsx";
+import Image from "../../ui/image/Image.tsx";
 import Breadcrumb from "../../ui/breadcrumb/breadcrumb.tsx";
 import ContactForm from "../contactForm/ContactForm.tsx";
 
