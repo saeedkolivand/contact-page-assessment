@@ -1,21 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm, type SubmitHandler, useWatch } from "react-hook-form";
 import type { ContactFormValues } from "../../types/contact";
 import FormInput from "../formInput/FormInput";
 import GenderSelect from "../genderSelect/GenderSelect";
 
 const ContactForm: React.FC = () => {
+  const [sent, setSent] = useState(false);
+
   const {
     register,
     handleSubmit,
     formState: { errors },
     control,
+    reset,
   } = useForm<ContactFormValues>();
 
   const message = useWatch({ control, name: "messageText" }) ?? "";
 
   const onSubmit: SubmitHandler<ContactFormValues> = (data) => {
     console.log(data);
+    reset();
+    setSent(true);
   };
 
   return (
@@ -140,6 +145,12 @@ const ContactForm: React.FC = () => {
         >
           Anfrage senden <span aria-hidden="true">→</span>
         </button>
+
+        {sent && (
+          <p role="status" className="mt-3 text-sm text-[#091dfb]">
+            Vielen Dank! Wir melden uns in Kürze bei Ihnen.
+          </p>
+        )}
       </div>
     </form>
   );
