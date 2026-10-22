@@ -35,7 +35,7 @@ const ContactForm: React.FC = () => {
           register={register}
           rules={{
             required: "Bitte geben Sie Ihren Namen ein",
-            maxLength: { value: 50, message: "Maximum 50 characters" },
+            maxLength: { value: 50, message: "Maximal 50 Zeichen" },
           }}
           label="Name"
           error={errors.name?.message}
@@ -45,8 +45,8 @@ const ContactForm: React.FC = () => {
           placeholder="Bitte Position eingeben"
           register={register}
           rules={{
-            required: "Position is required",
-            maxLength: { value: 100, message: "Maximum 100 characters" },
+            required: "Bitte geben Sie Ihre Position ein",
+            maxLength: { value: 100, message: "Maximal 100 Zeichen" },
           }}
           label="Position"
           error={errors.position?.message}
@@ -57,8 +57,8 @@ const ContactForm: React.FC = () => {
           placeholder="Bitte Ihre Nachricht eingeben"
           register={register}
           rules={{
-            required: "Message is required",
-            maxLength: { value: 100, message: "Maximum 100 characters" },
+            required: "Bitte geben Sie eine Nachricht ein",
+            maxLength: { value: 100, message: "Maximal 100 Zeichen" },
           }}
           label="Ihre Nachricht"
           as="textarea"
@@ -70,8 +70,8 @@ const ContactForm: React.FC = () => {
           placeholder="Bitte Unternehmen eingeben"
           register={register}
           rules={{
-            required: "Company is required",
-            maxLength: { value: 30, message: "Maximum 30 characters" },
+            required: "Bitte geben Sie Ihr Unternehmen ein",
+            maxLength: { value: 100, message: "Maximal 100 Zeichen" },
           }}
           label="Unternehmen"
           error={errors.company?.message}
@@ -89,7 +89,7 @@ const ContactForm: React.FC = () => {
           type="email"
           register={register}
           rules={{
-            required: "E-Mail is required",
+            required: "Bitte geben Sie Ihre E-Mail-Adresse ein",
             pattern: {
               value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
               message: "Bitte geben Sie eine gültige E-Mail ein",
@@ -105,10 +105,10 @@ const ContactForm: React.FC = () => {
           type="tel"
           register={register}
           rules={{
-            required: "Phone number is required",
+            required: "Bitte geben Sie Ihre Telefonnummer ein",
             pattern: {
               value: /^\+?[0-9\s().-]{7,20}$/,
-              message: "Enter a valid phone number",
+              message: "Bitte geben Sie eine gültige Telefonnummer ein",
             },
           }}
           label="Telefonnummer"

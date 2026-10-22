@@ -1,4 +1,3 @@
-import "./App.css";
 import Header from "./components/header/Header.tsx";
 import TrustBar from "./components/trustBar/TrustBar.tsx";
 import Footer from "./components/footer/Footer.tsx";
