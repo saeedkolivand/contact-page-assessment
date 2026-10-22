@@ -105,7 +105,7 @@ const ContactForm: React.FC = () => {
         />
 
         <FormInput
-          name="telefonnummer"
+          name="phoneNumber"
           placeholder="Bitte Telefonnummer eingeben"
           type="tel"
           register={register}
@@ -117,7 +117,7 @@ const ContactForm: React.FC = () => {
             },
           }}
           label="Telefonnummer"
-          error={errors.telefonnummer?.message}
+          error={errors.phoneNumber?.message}
         />
       </div>
       <div className="mt-6 md:w-1/2">

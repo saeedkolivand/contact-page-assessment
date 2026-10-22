@@ -5,6 +5,6 @@ export type ContactFormValues = {
   messageText: string;
   company: string;
   email: string;
-  telefonnummer: string;
+  phoneNumber: string;
   consent: boolean;
 };
